@@ -9,11 +9,8 @@ const refs = {
 
 refs.btn.addEventListener('click', onChangeBodyBackgroundColor);
 
-function onChangeBodyBackgroundColor(e) {
-  document.body.style.backgroundColor = getRandomHexColor();
-
-  e.currentTarget.value = getRandomHexColor();
-  console.log(e.currentTarget.value);
-
-  refs.colorValue.textContent = e.currentTarget.value;
+function onChangeBodyBackgroundColor() {
+  const colorHex = getRandomHexColor();
+  document.body.style.backgroundColor = colorHex;
+  refs.colorValue.textContent = colorHex;
 }
